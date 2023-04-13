@@ -6,8 +6,46 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  background: url('assets/bg_1.jpg');
+  background-repeat: repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logoImg {
+  width: 173px;
+  height: 85px;
+  position: absolute;
+  z-index: 10;
+  top: 356px;
+  left: 317px;
+}
+.spinButton {
+  width: 200px;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  padding: 0 50px;
+  border: 0;
+  transition: box-shadow .2s;
+  margin-top: 50px;
+}
+.spinButton:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }
