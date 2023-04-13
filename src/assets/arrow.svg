@@ -1,0 +1,24 @@
+<svg
+    version="1.0"
+    xmlns="http://www.w3.org/2000/svg"
+    width="64.000000pt"
+    height="64.000000pt"
+    viewBox="0 0 64.000000 64.000000"
+    preserveAspectRatio="xMidYMid meet">
+<g
+    transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+    fill="url(#MyGradient)"
+    stroke="none">
+<path
+    d="M323 532 c-172 -59 -309 -110 -305 -113 4 -4 70 -26 147 -49 77 -24
+    145 -48 151 -54 6 -6 30 -74 54 -151 23 -77 46 -143 49 -147 4 -5 55 134 114
+    307 58 173 105 315 104 314 -1 0 -142 -48 -314 -107z"
+/>
+</g>
+    <defs>
+    <linearGradient id="MyGradient">
+        <stop offset="5%" stop-color="#F60" />
+        <stop offset="95%" stop-color="#FF6" />
+    </linearGradient>
+    </defs>
+</svg>
