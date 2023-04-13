@@ -13,6 +13,9 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     'no-use-before-define': 'off',
     'react/require-default-props': 'off',
+    "prettier/prettier": ["error",{
+      "endOfLine": "auto"}
+    ]
   },
   env: {
     jest: true,

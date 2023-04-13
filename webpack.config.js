@@ -11,11 +11,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        include: path.resolve(__dirname, 'src'),
-        exclude: /(node_modules|bower_components|dist)/,
-        use: 'ts-loader',
+        test: /\.(ts)x?$/,
+        exclude: /node_modules|\.d\.ts$/, // this line as well
+        use: {
+          loader: 'ts-loader',
+          options: {
+          compilerOptions: {
+          noEmit: false, // this option will solve the issue
+         },
+        },
       },
+    },
       {
         test: /\.(png|jpg|gif)$/i,
         use: [
