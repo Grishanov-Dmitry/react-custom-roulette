@@ -9,11 +9,9 @@ body {
 main {
   background: url('assets/bg_1.jpg');
   background-repeat: repeat;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
 }
 .container {
   position: relative;
@@ -23,12 +21,12 @@ main {
   align-items: center;
 }
 .logoImg {
-  width: 173px;
-  height: 85px;
+  width: 117px;
+  height: 54px;
   position: absolute;
   z-index: 10;
-  top: 356px;
-  left: 317px;
+  top: 50%;
+  left: 44%;
 }
 .spinButton {
   width: 200px;
@@ -48,4 +46,18 @@ main {
 }
 .spinButton:hover {
   box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #060b9a;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
 }

@@ -1,0 +1,4 @@
+.separator {
+    border-top: solid 1px var(--border-color, #dbdbdb);
+    margin: 15px 0;
+}

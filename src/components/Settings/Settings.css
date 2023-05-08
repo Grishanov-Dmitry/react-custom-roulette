@@ -1,0 +1,34 @@
+.settingContainer {
+    color: aliceblue;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 700px;
+}
+.addDeleteContainer {
+    display: flex;
+}
+.presentList {
+    margin: 20px 0;
+    height: 150px;
+    overflow: auto;
+}
+.optionContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.reset-btn {
+    width: 400px;
+    margin-top: 70px;
+}
+
+.add-new {
+    width: 300px;
+    border-radius:15px;
+    border:0;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+    padding: 10px;
+}
