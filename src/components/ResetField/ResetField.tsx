@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { WheelData } from '../Wheel/types';
-import { initDrawingData } from '../../data';
+import { testDrawingData } from '../../data';
 import { Button } from '../Button';
 import { Heading } from '../Heading';
 
@@ -14,6 +14,6 @@ export const ResetField = ({ setDrawingData }: IResetField): ReactElement => (
     <p>
       Нажмите на кнопку, что бы сбросить список призов к начальному состоянию
     </p>
-    <Button text="Сбросить" onClick={() => setDrawingData(initDrawingData)} />
+    <Button text="Сбросить" onClick={() => setDrawingData(testDrawingData)} />
   </div>
 );

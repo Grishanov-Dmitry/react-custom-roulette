@@ -15,7 +15,12 @@ export const PresentList = ({
 }: IHeading): ReactElement => {
   const deleteDrawingData = (value: string) => {
     const newDrawingData = drawingData.filter(({ option }) => option !== value);
-    setDrawingData(newDrawingData);
+    if (!newDrawingData.length) {
+      // Have a mistake where data is empty arr
+      setDrawingData([{ option: '' }]);
+    } else {
+      setDrawingData(newDrawingData);
+    }
   };
 
   return (

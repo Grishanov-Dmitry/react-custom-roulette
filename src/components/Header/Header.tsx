@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { modes } from '../../data';
 import './Header.css';
+import { Button } from '../Button';
 
 interface IHeader {
   changeMode: (value: string) => void;
@@ -8,19 +9,15 @@ interface IHeader {
 
 export const Header = ({ changeMode }: IHeader): ReactElement => (
   <header>
-    <button
-      type="button"
-      className="changeModeButton"
+    <Button
+      text="Розыгрыш"
+      classes="changeModeButton"
       onClick={() => changeMode(modes.drawing)}
-    >
-      Розыгрыш
-    </button>
-    <button
-      type="button"
-      className="changeModeButton"
+    />
+    <Button
+      text="Настройки"
+      classes="changeModeButton"
       onClick={() => changeMode(modes.settings)}
-    >
-      Настройки
-    </button>
+    />
   </header>
 );

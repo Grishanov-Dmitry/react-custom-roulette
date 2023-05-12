@@ -195,7 +195,7 @@ const drawWheel = (
         const text = data[i].option;
         ctx.font = `bold ${(style?.fontSize || fontSize) * 2}px ${
           style?.fontFamily || fontFamily
-        }, Helvetica, Arial`;
+        }, Roboto Condensed`;
         ctx.fillStyle = (style && style.textColor) as string;
         ctx.fillText(
           text || '',

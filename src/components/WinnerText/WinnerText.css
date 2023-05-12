@@ -1,4 +1,30 @@
 .winnerText {
-    color: white;
-    height: 150px;
+    color: rgb(233, 227, 238);
+    height: 80px;
+    background: linear-gradient(220deg, #b39cd8, #5a61a4, #a797f5, #5ea7df);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+	transform: translate3d(0, 0, 0);
+    width: 450px;
+    border-radius: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+	border: 1px solid #9ca0c0;
+	text-shadow: 1px 0 1px #22246e, 0 1px 1px #22246e, -1px 0 1px #22246e, 0 -1px 1px #22246e;
+}
+ 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

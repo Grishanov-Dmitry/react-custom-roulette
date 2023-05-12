@@ -7,6 +7,7 @@ interface IPreparedWheel {
   mustStartSpinning: boolean;
   prizeResult: number;
   data: WheelData[];
+  wheelSpeed: number;
   setMustSpin: (value: boolean) => void;
 }
 
@@ -14,6 +15,7 @@ export const PreparedWheel = ({
   mustStartSpinning,
   prizeResult,
   data,
+  wheelSpeed,
   setMustSpin,
 }: IPreparedWheel): ReactElement => (
   <Wheel
@@ -22,9 +24,9 @@ export const PreparedWheel = ({
     innerRadius={0}
     innerBorderWidth={60}
     backgroundColors={['#0133ac', '#011c6b']}
-    spinDuration={0.1}
+    spinDuration={wheelSpeed}
     outerBorderColor="#f5feff"
-    innerBorderColor="gray"
+    innerBorderColor="#f7fcff"
     radiusLineColor="#1957d0"
     mustStartSpinning={mustStartSpinning}
     prizeNumber={prizeResult}

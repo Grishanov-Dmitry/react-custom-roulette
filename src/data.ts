@@ -5,7 +5,7 @@ export const modes = {
   settings: 'settings',
 };
 
-export const initDrawingData: WheelData[] = [
+export const testDrawingData: WheelData[] = [
   { option: '100' },
   { option: '200' },
   { option: '300' },
@@ -14,5 +14,4 @@ export const initDrawingData: WheelData[] = [
   { option: '600' },
   { option: '700' },
   { option: '800' },
-  { option: '900' },
 ];

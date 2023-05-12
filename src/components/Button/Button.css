@@ -1,10 +1,9 @@
 .btn {
     width: 75px;
     height: 25px;
-    color: #fff;
+    color: #cbceeb;
     border-radius: 5px;
     margin: 10px;
-    font-family: 'Lato', sans-serif;
     font-weight: 500;
     background: transparent;
     cursor: pointer;

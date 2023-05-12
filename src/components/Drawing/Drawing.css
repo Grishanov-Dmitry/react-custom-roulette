@@ -1,0 +1,52 @@
+@keyframes square-transform-animate {
+    0% {
+        transform: scaleX(.95);
+    }
+    
+    100% {
+        transform: scaleX(1.05);
+    }
+}
+
+.spinButton {
+    width: 200px;
+    background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    padding: 0 50px;
+    border: 0;
+    transition: box-shadow .2s;
+    margin-top: 50px;
+    transform: scaleX(.5);
+    animation: square-transform-animate 1s ease infinite alternate;
+    position: relative;
+    }
+    .spinButton:hover {
+    box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+.drawingContainer {
+    background: url('../../assets/bg_1.jpg') center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+} 
+.logoImg {
+    width: 106px;
+    height: 55px;
+    position: absolute;
+    z-index: 10;
+    top: 195px;
+    left: 175px;
+    filter: drop-shadow(2px -2px 11px #4335c4);
+}
+.wheelContainer {
+    position: relative;
+}

@@ -11,6 +11,9 @@ export const WinnerText = ({
   isShowWinnerText,
 }: IWinnerText): ReactElement => (
   <div className="winnerText">
-    {isShowWinnerText && `Поздравляем, Вы выиграли ${prizeResult}`}
+    <p className="winnerTextValue">
+      {isShowWinnerText && `Поздравляем, Вы выиграли ${prizeResult}`}
+      {!isShowWinnerText && `Крути колесо, получи приз!`}
+    </p>
   </div>
 );
