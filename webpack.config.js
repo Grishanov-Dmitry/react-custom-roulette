@@ -11,6 +11,20 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+			{
+				test: /\.svg$/,
+				use: [ 'raw-loader' ]
+			},
+      {
         test: /\.(ts)x?$/,
         exclude: /node_modules|\.d\.ts$/, // this line as well
         use: {
