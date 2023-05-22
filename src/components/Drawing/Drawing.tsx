@@ -2,7 +2,7 @@ import React, { ReactElement, useLayoutEffect } from 'react';
 import { WinnerText } from '../WinnerText/WinnerText';
 import { PreparedWheel } from '../PreparedWheel';
 import { WheelData } from '../Wheel/types';
-import logo from '../../assets/logo2.png';
+import logoVulkan from '../../assets/logo_vulkan.png';
 import './Drawing.css';
 
 interface IDrawing {
@@ -51,7 +51,7 @@ export const Drawing = ({
           wheelSpeed={wheelSpeed}
           setMustSpin={setMustSpin}
         />
-        <img src={logo} alt="logo" className="logoImg" />
+        <img src={logoVulkan} alt="logo" className="logoImg" />
       </div>
       <button type="button" className="spinButton" onClick={handleSpinClick}>
         CLICK ME

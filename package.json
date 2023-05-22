@@ -3,6 +3,7 @@
   "version": "1.4.0",
   "description": "Customizable React roulette wheel with spinning animation",
   "main": "./dist/bundle.js",
+  "homepage": "https://Grishanov-Dmitry.github.io/react-custom-roulette",
   "repository": {
     "type": "git",
     "url": "https://github.com/effectussoftware/react-custom-roulette"
@@ -62,7 +63,9 @@
   "scripts": {
     "start-server": "react-scripts start",
     "start": "webpack --watch",
-    "build": "webpack && tsc && cp -R ./src/assets ./dist",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "coverage": "CI=true npm test -- --env=jsdom --coverage",
     "eject": "react-scripts eject",

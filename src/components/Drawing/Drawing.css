@@ -39,14 +39,33 @@
     height: 100%;
 } 
 .logoImg {
-    width: 106px;
-    height: 55px;
+    width: 70px;
+    height: 70px;
+    top: 102px;
+    left: 105px;
     position: absolute;
     z-index: 10;
-    top: 195px;
-    left: 175px;
-    filter: drop-shadow(2px -2px 11px #4335c4);
+    border-radius: 50%;
+    filter: drop-shadow(2px -2px 15px #4335c4);
 }
 .wheelContainer {
     position: relative;
+}
+
+@media (min-width: 480px) {
+	.logoImg {
+        width: 95px;
+        height: 95px;
+        top: 150px;
+        left: 152px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.logoImg {
+        width: 110px;
+        height: 110px;
+        top: 168px;
+        left: 170px;
+	}
 }

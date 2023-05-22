@@ -4,14 +4,24 @@ import { NonDraggableImage } from '../common/styledComponents';
 
 export const RouletteContainer = styled.div`
   position: relative;
-  width: 80vw;
+  width: 280px;
   max-width: 450px;
-  height: 80vw;
+  height: 280px;
   max-height: 450px;
   object-fit: contain;
   flex-shrink: 0;
   z-index: 5;
   pointer-events: none;
+  @media (min-width: 480px) {
+    height: 400px;
+    width: 400px;
+  }
+  @media (min-width: 1200px) {
+    width: 80vw;
+    max-width: 450px;
+    height: 80vw;
+    max-height: 450px;
+  }
 `;
 
 export const RotationContainer = styled.div`
