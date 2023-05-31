@@ -1,12 +1,13 @@
 import React, { ReactElement } from 'react';
 import './Settings.css';
 import { WheelData } from '../Wheel/types';
-import { ResetField } from '../ResetField';
 import { Separator } from '../Separator';
 import { PresentDescription } from '../PresentDescription';
 import { PresentList } from '../PresentList';
 import { AddNewPresent } from '../AddNewPresent';
 import { WheelSpeed } from '../WheelSpeed';
+import { ResetDrawingData } from '../ResetDrawingData';
+import { ResetResultList } from '../ResetResultList';
 
 interface ISettings {
   drawingData: WheelData[];
@@ -15,6 +16,7 @@ interface ISettings {
   setDrawingData: (newDrawingData: WheelData[]) => void;
   setPresentDescription: (value: string) => void;
   setWheelSpeed: (value: number) => void;
+  resetResultList: () => void;
 }
 
 export const Settings = ({
@@ -24,11 +26,15 @@ export const Settings = ({
   presentDescription,
   setPresentDescription,
   setWheelSpeed,
+  resetResultList,
 }: ISettings): ReactElement => {
   return (
     <div className="settingContainer">
       <div className="content">
-        <ResetField setDrawingData={setDrawingData} />
+        <ResetDrawingData setDrawingData={setDrawingData} />
+        <Separator />
+
+        <ResetResultList resetResultList={resetResultList} />
         <Separator />
 
         <PresentList

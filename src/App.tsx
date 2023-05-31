@@ -94,6 +94,11 @@ export const App = (): ReactElement => {
     saveResultToLs(newResultList);
   };
 
+  const resetResultList = () => {
+    setResultList([]);
+    saveResultToLs([]);
+  };
+
   return (
     <main>
       <Header changeMode={setMode} />
@@ -120,6 +125,7 @@ export const App = (): ReactElement => {
           presentDescription={presentDescription}
           wheelSpeed={wheelSpeed}
           setWheelSpeed={setWheelSpeed}
+          resetResultList={resetResultList}
         />
       )}
     </main>
