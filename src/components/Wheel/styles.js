@@ -18,9 +18,9 @@ export const RouletteContainer = styled.div`
   }
   @media (min-width: 1200px) {
     width: 80vw;
-    max-width: 450px;
+    max-width: 700px;
     height: 80vw;
-    max-height: 450px;
+    max-height: 700px;
   }
 `;
 
@@ -80,7 +80,7 @@ export const RotationContainer = styled.div`
 export const RoulettePointerImage = styled(NonDraggableImage)`
   position: absolute;
   z-index: 5;
-  width: 17%;
+  width: 14%;
   right: 6px;
   top: 15px;
 `;

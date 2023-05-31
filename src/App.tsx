@@ -4,11 +4,15 @@ import { Drawing } from './components/Drawing';
 import { Header } from './components/Header';
 import { testDrawingData, modes } from './data';
 import { Settings } from './components/Settings';
+import { IResult } from './types';
 
 export const App = (): ReactElement => {
   const lsPresentDescription = localStorage.getItem('presentDescription');
   const lsWheelSpeed = localStorage.getItem('wheelSpeed');
   const lsDrawingData = localStorage.getItem('drawingData');
+  const lsResultList = localStorage.getItem('resultList');
+
+  const initResultList = lsResultList ? JSON.parse(lsResultList) : [];
 
   const initDrawingData = lsDrawingData
     ? JSON.parse(lsDrawingData)
@@ -28,6 +32,8 @@ export const App = (): ReactElement => {
   );
   const [drawingData, setDrawingData] = useState<WheelData[]>(initDrawingData);
   const [wheelSpeed, setWheelSpeed] = useState<number>(initWheelSpeed);
+  const [resultList, setResultList] = useState<IResult[]>(initResultList);
+  const [winTextValue, setWinTextValue] = useState<string>('');
 
   const saveToLocalState = () => {
     localStorage.setItem('drawingData', JSON.stringify(drawingData));
@@ -48,7 +54,11 @@ export const App = (): ReactElement => {
     }
   };
   const isShowWinnerText = !isInitCondition && !mustSpin;
-  const winnerText = drawingData[prizeResult]?.option || '0';
+  const getWinnerText = () => {
+    const winRes = drawingData[prizeResult]?.option || '0';
+
+    return setWinTextValue(`${winRes} ${presentDescription}`);
+  };
   const getDrawingData = drawingData.map(wheelOption => ({
     ...wheelOption,
     option: `${wheelOption.option} ${presentDescription}`,
@@ -64,18 +74,39 @@ export const App = (): ReactElement => {
     document.addEventListener('keydown', pressStartButton);
   });
 
+  const saveResultToLs = list => {
+    localStorage.setItem('resultList', JSON.stringify(list));
+  };
+
+  const wheelStopped = () => {
+    setMustSpin(false);
+    getWinnerText();
+
+    const newResultList: IResult[] = [
+      {
+        date: String(new Date()),
+        value: drawingData[prizeResult]?.option || '',
+      },
+      ...resultList,
+    ];
+
+    setResultList(newResultList);
+    saveResultToLs(newResultList);
+  };
+
   return (
     <main>
       <Header changeMode={setMode} />
       {mode === modes.drawing && (
         <Drawing
-          winnerText={`${winnerText} ${presentDescription}`}
+          winnerText={winTextValue}
           drawingData={getDrawingData}
           isShowWinnerText={isShowWinnerText}
           mustSpin={mustSpin}
           prizeResult={prizeResult}
           wheelSpeed={wheelSpeed}
-          setMustSpin={setMustSpin}
+          resultList={resultList}
+          wheelStopped={wheelStopped}
           handleSpinClick={handleSpinClick}
           saveToLocalState={saveToLocalState}
           setIsInitCondition={setIsInitCondition}

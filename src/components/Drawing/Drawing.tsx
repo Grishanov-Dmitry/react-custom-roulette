@@ -4,6 +4,8 @@ import { PreparedWheel } from '../PreparedWheel';
 import { WheelData } from '../Wheel/types';
 import logoVulkan from '../../assets/logo_vulkan.png';
 import './Drawing.css';
+import { IResult } from '../../types';
+import { ResultTable } from '../ResultTable';
 
 interface IDrawing {
   winnerText: string;
@@ -12,7 +14,8 @@ interface IDrawing {
   prizeResult: number;
   drawingData: WheelData[];
   wheelSpeed: number;
-  setMustSpin: (value: boolean) => void;
+  resultList: IResult[];
+  wheelStopped: () => void;
   handleSpinClick: () => void;
   saveToLocalState: () => void;
   setIsInitCondition: (value: boolean) => void;
@@ -25,7 +28,8 @@ export const Drawing = ({
   prizeResult,
   drawingData,
   wheelSpeed,
-  setMustSpin,
+  resultList,
+  wheelStopped,
   handleSpinClick,
   saveToLocalState,
   setIsInitCondition,
@@ -39,23 +43,26 @@ export const Drawing = ({
 
   return (
     <div className="drawingContainer">
-      <WinnerText
-        prizeResult={winnerText}
-        isShowWinnerText={isShowWinnerText}
-      />
+      <div className="info">
+        <WinnerText
+          prizeResult={winnerText}
+          isShowWinnerText={isShowWinnerText}
+        />
+        <button type="button" className="spinButton" onClick={handleSpinClick}>
+          CLICK ME
+        </button>
+        <ResultTable resultList={resultList} />
+      </div>
       <div className="wheelContainer">
         <PreparedWheel
           mustStartSpinning={mustSpin}
           prizeResult={prizeResult}
           data={drawingData}
           wheelSpeed={wheelSpeed}
-          setMustSpin={setMustSpin}
+          wheelStopped={wheelStopped}
         />
         <img src={logoVulkan} alt="logo" className="logoImg" />
       </div>
-      <button type="button" className="spinButton" onClick={handleSpinClick}>
-        CLICK ME
-      </button>
     </div>
   );
 };

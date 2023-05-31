@@ -8,7 +8,7 @@ interface IPreparedWheel {
   prizeResult: number;
   data: WheelData[];
   wheelSpeed: number;
-  setMustSpin: (value: boolean) => void;
+  wheelStopped: () => void;
 }
 
 export const PreparedWheel = ({
@@ -16,7 +16,7 @@ export const PreparedWheel = ({
   prizeResult,
   data,
   wheelSpeed,
-  setMustSpin,
+  wheelStopped,
 }: IPreparedWheel): ReactElement => (
   <Wheel
     textColors={['#ffffff']}
@@ -31,13 +31,11 @@ export const PreparedWheel = ({
     mustStartSpinning={mustStartSpinning}
     prizeNumber={prizeResult}
     data={data}
-    onStopSpinning={() => {
-      setMustSpin(false);
-    }}
+    onStopSpinning={wheelStopped}
     pointerProps={{
       src: arrow,
       style: {
-        right: '-35px',
+        right: '-7px',
         transform: 'rotate(-170deg)',
       },
     }}

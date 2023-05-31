@@ -1,0 +1,1 @@
+export { ResultTableHeader } from './ResultTableHeader';
