@@ -1,4 +1,5 @@
 import React, { ReactElement, useState } from 'react';
+import uniqid from 'uniqid';
 import { Separator } from '../Separator';
 import { Heading } from '../Heading';
 import { WheelData } from '../Wheel/types';
@@ -24,6 +25,7 @@ export const AddNewPresent = ({
     );
     newDrawingData.push({
       option: newDrawing,
+      id: uniqid(),
     });
     setDrawingData(newDrawingData);
     setNewDrawing('');
