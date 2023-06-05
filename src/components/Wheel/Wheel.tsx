@@ -7,12 +7,7 @@ import {
   isCustomFont,
   makeClassKey,
 } from '../../utils';
-import { roulettePointer } from '../common/images';
-import {
-  RotationContainer,
-  RouletteContainer,
-  RoulettePointerImage,
-} from './styles';
+import { RotationContainer, RouletteContainer } from './styles';
 import {
   DEFAULT_BACKGROUND_COLORS,
   DEFAULT_FONT_FAMILY,
@@ -29,7 +24,7 @@ import {
   DEFAULT_TEXT_DISTANCE,
   WEB_FONTS,
 } from '../../strings';
-import { PointerProps, WheelData } from './types';
+import { WheelData } from './types';
 import WheelCanvas from '../WheelCanvas';
 
 interface Props {
@@ -52,7 +47,6 @@ interface Props {
   textDistance?: number;
   spinDuration?: number;
   startingOptionIndex?: number;
-  pointerProps?: PointerProps;
 }
 
 const STARTED_SPINNING = 'started-spinning';
@@ -81,7 +75,6 @@ export const Wheel = ({
   textDistance = DEFAULT_TEXT_DISTANCE,
   spinDuration = DEFAULT_SPIN_DURATION,
   startingOptionIndex = -1,
-  pointerProps = {},
 }: Props): JSX.Element | null => {
   const [wheelData, setWheelData] = useState<WheelData[]>([...data]);
   const [prizeMap, setPrizeMap] = useState<number[][]>([[0]]);
@@ -286,11 +279,6 @@ export const Wheel = ({
           textDistance={textDistance}
         />
       </RotationContainer>
-      <RoulettePointerImage
-        style={pointerProps?.style}
-        src={pointerProps?.src || roulettePointer.src}
-        alt="roulette-static"
-      />
     </RouletteContainer>
   );
 };

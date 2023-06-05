@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react';
-import arrow from '../../assets/arrow.svg';
 import { WheelData } from '../Wheel/types';
 import { Wheel } from '../Wheel/Wheel';
 
@@ -32,12 +31,5 @@ export const PreparedWheel = ({
     prizeNumber={prizeResult}
     data={data}
     onStopSpinning={wheelStopped}
-    pointerProps={{
-      src: arrow,
-      style: {
-        right: '-7px',
-        transform: 'rotate(-170deg)',
-      },
-    }}
   />
 );

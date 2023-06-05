@@ -17,6 +17,7 @@ export const RouletteContainer = styled.div`
     width: 400px;
   }
   @media (min-width: 1200px) {
+    transform: rotate(220deg);
     width: 80vw;
     max-width: 700px;
     height: 80vw;
@@ -80,7 +81,6 @@ export const RotationContainer = styled.div`
 export const RoulettePointerImage = styled(NonDraggableImage)`
   position: absolute;
   z-index: 5;
-  width: 14%;
-  right: 6px;
-  top: 15px;
+  width: 10%;
+  top: 315px;
 `;

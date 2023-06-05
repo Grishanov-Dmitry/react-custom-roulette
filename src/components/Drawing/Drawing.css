@@ -52,6 +52,9 @@
     border-radius: 50%;
     filter: drop-shadow(2px -2px 15px #4335c4);
 }
+.containerWithArrow {
+    position: relative;
+}
 .wheelContainer {
     position: relative;
     overflow: hidden;
