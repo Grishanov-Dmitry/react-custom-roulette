@@ -2436,14 +2436,6 @@
   "resolved" "https://registry.npmjs.org/address/-/address-1.1.2.tgz"
   "version" "1.1.2"
 
-"adjust-sourcemap-loader@^4.0.0":
-  "integrity" "sha512-OXwN5b9pCUXNQHJpwwD2qP40byEmSgzj8B4ydSN0uMNYWiFmJ6x6KwUllMmfk8Rwu/HJDFR7U8ubsWBoN0Xp0A=="
-  "resolved" "https://registry.npmjs.org/adjust-sourcemap-loader/-/adjust-sourcemap-loader-4.0.0.tgz"
-  "version" "4.0.0"
-  dependencies:
-    "loader-utils" "^2.0.0"
-    "regex-parser" "^2.2.11"
-
 "adjust-sourcemap-loader@3.0.0":
   "integrity" "sha512-YBrGyT2/uVQ/c6Rr+t6ZJXniY03YtHGMJQYal368burRGYKqhx9qGTWqcBU5s1CwYY9E/ri63RYyG1IacMZtqw=="
   "resolved" "https://registry.npmjs.org/adjust-sourcemap-loader/-/adjust-sourcemap-loader-3.0.0.tgz"
@@ -6082,14 +6074,6 @@
     "loader-utils" "^2.0.0"
     "schema-utils" "^3.0.0"
 
-"file-loader@~6.2.0":
-  "integrity" "sha512-qo3glqyTa61Ytg4u73GultjHGjdRyig3tG6lPtyX/jOEJvHif9uB0/OCI2Kif6ctF3caQTW2G5gym21oAsI4pw=="
-  "resolved" "https://registry.npmjs.org/file-loader/-/file-loader-6.2.0.tgz"
-  "version" "6.2.0"
-  dependencies:
-    "loader-utils" "^2.0.0"
-    "schema-utils" "^3.0.0"
-
 "filename-regex@^2.0.0":
   "integrity" "sha1-wcS5vuPglyXdsQa3XB4wH+LxiyY= sha512-BTCqyBaWBTsauvnHiE8i562+EdJj+oUpkqWp2R1iCoR8f6oo8STRu3of7WJJ0TqWtxN50a5YFpzYK4Jj9esYfQ=="
   "resolved" "https://registry.npmjs.org/filename-regex/-/filename-regex-2.0.1.tgz"
@@ -8312,7 +8296,7 @@
   "resolved" "https://registry.npmjs.org/kleur/-/kleur-3.0.3.tgz"
   "version" "3.0.3"
 
-"klona@^2.0.4", "klona@^2.0.6":
+"klona@^2.0.4":
   "integrity" "sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA=="
   "resolved" "https://registry.npmjs.org/klona/-/klona-2.0.6.tgz"
   "version" "2.0.6"
@@ -8919,7 +8903,7 @@
     "dns-packet" "^1.3.1"
     "thunky" "^1.0.2"
 
-"nanoid@^3.1.20", "nanoid@^3.3.6":
+"nanoid@^3.1.20":
   "integrity" "sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA=="
   "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.3.6.tgz"
   "version" "3.3.6"
@@ -10393,15 +10377,6 @@
     "nanoid" "^3.1.20"
     "source-map" "^0.6.1"
 
-"postcss@^8.2.14":
-  "integrity" "sha512-bQ3qMcpF6A/YjR55xtoTr0jGOlnPOKAIMdOWiv0EIT6HVPEaJiJB4NLljSbiHoC2RX7DN5Uvjtpbg1NPdwv1oA=="
-  "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.23.tgz"
-  "version" "8.4.23"
-  dependencies:
-    "nanoid" "^3.3.6"
-    "picocolors" "^1.0.0"
-    "source-map-js" "^1.0.2"
-
 "prelude-ls@^1.2.1":
   "integrity" "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g=="
   "resolved" "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
@@ -11212,17 +11187,6 @@
     "rework-visit" "1.0.0"
     "source-map" "0.6.1"
 
-"resolve-url-loader@^5.0.0":
-  "integrity" "sha512-uZtduh8/8srhBoMx//5bwqjQ+rfYOUq8zC9NrMUGtjBiGTtFJM42s58/36+hTqeqINcnYe08Nj3LkK9lW4N8Xg=="
-  "resolved" "https://registry.npmjs.org/resolve-url-loader/-/resolve-url-loader-5.0.0.tgz"
-  "version" "5.0.0"
-  dependencies:
-    "adjust-sourcemap-loader" "^4.0.0"
-    "convert-source-map" "^1.7.0"
-    "loader-utils" "^2.0.0"
-    "postcss" "^8.2.14"
-    "source-map" "0.6.1"
-
 "resolve-url@^0.2.1":
   "integrity" "sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo= sha512-ZuF55hVUQaaczgOIwqWzkEcEidmlD/xl44x1UZnhOXcYuFN2S6+rcxpG+C1N3So0wvNI3DmJICUFfu2SxhBmvg=="
   "resolved" "https://registry.npmjs.org/resolve-url/-/resolve-url-0.2.1.tgz"
@@ -11418,15 +11382,7 @@
     "schema-utils" "^3.0.0"
     "semver" "^7.3.2"
 
-"sass-loader@^13.2.2":
-  "integrity" "sha512-nrIdVAAte3B9icfBiGWvmMhT/D+eCDwnk+yA7VE/76dp/WkHX+i44Q/pfo71NYbwj0Ap+PGsn0ekOuU1WFJ2AA=="
-  "resolved" "https://registry.npmjs.org/sass-loader/-/sass-loader-13.2.2.tgz"
-  "version" "13.2.2"
-  dependencies:
-    "klona" "^2.0.6"
-    "neo-async" "^2.6.2"
-
-"sass@^1.3.0", "sass@^1.62.1":
+"sass@^1.3.0":
   "integrity" "sha512-NHpxIzN29MXvWiuswfc1W3I0N8SXBd8UR26WntmDlRYf0bSADnwnOjsyMZ3lMezSlArD33Vs3YFhp7dWvL770A=="
   "resolved" "https://registry.npmjs.org/sass/-/sass-1.62.1.tgz"
   "version" "1.62.1"
@@ -11793,7 +11749,7 @@
   "resolved" "https://registry.npmjs.org/source-list-map/-/source-list-map-2.0.1.tgz"
   "version" "2.0.1"
 
-"source-map-js@^1.0.2", "source-map-js@>=0.6.2 <2.0.0":
+"source-map-js@>=0.6.2 <2.0.0":
   "integrity" "sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw=="
   "resolved" "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"
   "version" "1.0.2"
@@ -12271,13 +12227,6 @@
   "resolved" "https://registry.npmjs.org/svg-parser/-/svg-parser-2.0.4.tgz"
   "version" "2.0.4"
 
-"svg-url-loader@^8.0.0":
-  "integrity" "sha512-5doSXvl18hY1fGsRLdhWAU5jgzgxJ06/gc/26cpuDnN0xOz1HmmfhkpL29SSrdIvhtxQ1UwGzmk7wTT/l48mKw=="
-  "resolved" "https://registry.npmjs.org/svg-url-loader/-/svg-url-loader-8.0.0.tgz"
-  "version" "8.0.0"
-  dependencies:
-    "file-loader" "~6.2.0"
-
 "svgo@^1.0.0", "svgo@^1.2.2":
   "integrity" "sha512-yhy/sQYxR5BkC98CY7o31VGsg014AKLEPxdfhora76l36hD9Rdy5NZA/Ocn6yayNPgSamYdtX2rFJdcv07AYVw=="
   "resolved" "https://registry.npmjs.org/svgo/-/svgo-1.3.2.tgz"
@@ -12701,6 +12650,11 @@
   "resolved" "https://registry.npmjs.org/uniq/-/uniq-1.0.1.tgz"
   "version" "1.0.1"
 
+"uniqid@^5.4.0":
+  "integrity" "sha512-38JRbJ4Fj94VmnC7G/J/5n5SC7Ab46OM5iNtSstB/ko3l1b5g7ALt4qzHFgGciFkyiRNtDXtLNb+VsxtMSE77A=="
+  "resolved" "https://registry.npmjs.org/uniqid/-/uniqid-5.4.0.tgz"
+  "version" "5.4.0"
+
 "uniqs@^2.0.0":
   "integrity" "sha1-/+3ks2slKQaW5uFl1KWe25mOawI= sha512-mZdDpf3vBV5Efh29kMw5tXoup/buMgxLzOt/XKFKcVmi+15ManNQWr6HfZ2aiZTYlYixbdNJ0KFmIZIv52tHSQ=="
   "resolved" "https://registry.npmjs.org/uniqs/-/uniqs-2.0.0.tgz"
@@ -13070,7 +13024,7 @@
     "source-list-map" "^2.0.0"
     "source-map" "~0.6.1"
 
-"webpack@^4.0.0", "webpack@^4.0.0 || ^5.0.0", "webpack@^4.27.0 || ^5.0.0", "webpack@^4.36.0 || ^5.0.0", "webpack@^4.4.0 || ^5.0.0", "webpack@^4.44.2", "webpack@^5.0.0", "webpack@>=2", "webpack@>=4.43.0 <6.0.0", "webpack@2 || 3 || 4", "webpack@4.44.2", "webpack@4.x.x":
+"webpack@^4.0.0", "webpack@^4.0.0 || ^5.0.0", "webpack@^4.27.0 || ^5.0.0", "webpack@^4.36.0 || ^5.0.0", "webpack@^4.4.0 || ^5.0.0", "webpack@>=2", "webpack@>=4.43.0 <6.0.0", "webpack@2 || 3 || 4", "webpack@4.44.2", "webpack@4.x.x":
   "integrity" "sha512-6KJVGlCxYdISyurpQ0IPTklv+DULv05rs2hseIXer6D7KrUicRDLFb4IUM1S6LUAKypPM/nSiVSuv8jHu1m3/Q=="
   "resolved" "https://registry.npmjs.org/webpack/-/webpack-4.44.2.tgz"
   "version" "4.44.2"
