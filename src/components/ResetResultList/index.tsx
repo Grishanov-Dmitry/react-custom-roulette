@@ -1,1 +1,0 @@
-export { ResetResultList } from './ResetResultList';

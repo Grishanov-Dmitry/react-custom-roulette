@@ -1,1 +1,0 @@
-export { AddNewPresent } from './AddNewPresent';

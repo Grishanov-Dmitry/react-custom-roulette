@@ -1,1 +1,0 @@
-export { ResetDrawingData } from './ResetDrawingData';

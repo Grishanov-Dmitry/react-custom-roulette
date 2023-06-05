@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-custom-roulette/static/css/main.b4e36ac7.chunk.css",
+    "main.js": "/react-custom-roulette/static/js/main.d744b1cb.chunk.js",
+    "main.js.map": "/react-custom-roulette/static/js/main.d744b1cb.chunk.js.map",
+    "runtime-main.js": "/react-custom-roulette/static/js/runtime-main.f518e146.js",
+    "runtime-main.js.map": "/react-custom-roulette/static/js/runtime-main.f518e146.js.map",
+    "static/js/2.76b2ac88.chunk.js": "/react-custom-roulette/static/js/2.76b2ac88.chunk.js",
+    "static/js/2.76b2ac88.chunk.js.map": "/react-custom-roulette/static/js/2.76b2ac88.chunk.js.map",
+    "index.html": "/react-custom-roulette/index.html",
+    "static/css/main.b4e36ac7.chunk.css.map": "/react-custom-roulette/static/css/main.b4e36ac7.chunk.css.map",
+    "static/js/2.76b2ac88.chunk.js.LICENSE.txt": "/react-custom-roulette/static/js/2.76b2ac88.chunk.js.LICENSE.txt",
+    "static/media/arrow.b8ff3dd2.svg": "/react-custom-roulette/static/media/arrow.b8ff3dd2.svg",
+    "static/media/Drawing.css": "/react-custom-roulette/static/media/bg_1.74af1611.jpg",
+    "static/media/Settings.css": "/react-custom-roulette/static/media/bg_2.f289ef45.jpg",
+    "static/media/logo_vulkan.78a644c6.png": "/react-custom-roulette/static/media/logo_vulkan.78a644c6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f518e146.js",
+    "static/js/2.76b2ac88.chunk.js",
+    "static/css/main.b4e36ac7.chunk.css",
+    "static/js/main.d744b1cb.chunk.js"
+  ]
+}
