@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import { WheelData } from './components/Wheel/types';
 import { Drawing } from './components/Drawing';
 import { Header } from './components/Header';
@@ -71,10 +71,6 @@ export const App = (): ReactElement => {
     }
   };
 
-  useEffect(() => {
-    document.addEventListener('keydown', pressStartButton);
-  });
-
   const saveResultToLs = list => {
     localStorage.setItem('resultList', JSON.stringify(list));
   };
@@ -113,6 +109,7 @@ export const App = (): ReactElement => {
           wheelSpeed={wheelSpeed}
           resultList={resultList}
           textDistance={textDistance}
+          pressStartButton={pressStartButton}
           wheelStopped={wheelStopped}
           handleSpinClick={handleSpinClick}
           saveToLocalState={saveToLocalState}

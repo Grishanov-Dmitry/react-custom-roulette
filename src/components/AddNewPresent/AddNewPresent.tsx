@@ -19,14 +19,21 @@ export const AddNewPresent = ({
       return;
     }
 
+    const drawingArr = newDrawing.split('&');
+
     // Filtering for delete empty options. We are adding an empty when user is deleting all presents
     const newDrawingData = [...drawingData].filter(
       ({ option }) => option?.length
     );
-    newDrawingData.push({
-      option: newDrawing,
-      id: uniqid(),
+    drawingArr.filter(value => value === '');
+
+    drawingArr.forEach(newValue => {
+      newDrawingData.push({
+        option: newValue,
+        id: uniqid(),
+      });
     });
+
     setDrawingData(newDrawingData);
     setNewDrawing('');
   };

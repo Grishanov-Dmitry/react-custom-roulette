@@ -18,6 +18,7 @@ interface IDrawing {
   wheelSpeed: number;
   resultList: IResult[];
   textDistance: number;
+  pressStartButton: (e: KeyboardEvent) => void;
   wheelStopped: () => void;
   handleSpinClick: () => void;
   saveToLocalState: () => void;
@@ -33,6 +34,7 @@ export const Drawing = ({
   wheelSpeed,
   resultList,
   textDistance,
+  pressStartButton,
   wheelStopped,
   handleSpinClick,
   saveToLocalState,
@@ -46,7 +48,14 @@ export const Drawing = ({
   }, []);
 
   return (
-    <div className="drawingContainer">
+    <div
+      className="drawingContainer"
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      onKeyDown={pressStartButton}
+      tabIndex={0}
+      role="button"
+    >
       <div className="info">
         <WinnerText
           prizeResult={winnerText}
