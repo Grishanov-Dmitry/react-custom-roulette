@@ -69,14 +69,7 @@ export const Drawing = ({
           />
           <img src={logoVulkan} alt="logo" className="logoImg" />
         </div>
-        <RoulettePointerImage
-          style={{
-            left: '-85px',
-            transform: 'rotate(50deg)',
-          }}
-          src={arrow}
-          alt="roulette-static"
-        />
+        <RoulettePointerImage src={arrow} alt="roulette-static" />
       </div>
     </div>
   );

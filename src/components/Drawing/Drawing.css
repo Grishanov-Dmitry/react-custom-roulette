@@ -45,8 +45,8 @@
 .logoImg {
     width: 70px;
     height: 70px;
-    top: 102px;
-    left: 105px;
+    top: 175px;
+    left: 178px;
     position: absolute;
     z-index: 10;
     border-radius: 50%;
@@ -64,8 +64,8 @@
 	.logoImg {
         width: 95px;
         height: 95px;
-        top: 150px;
-        left: 152px;
+        top: 175px;
+        left: 178px;
 	}
 }
 

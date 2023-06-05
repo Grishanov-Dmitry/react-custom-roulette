@@ -12,12 +12,12 @@ export const RouletteContainer = styled.div`
   flex-shrink: 0;
   z-index: 5;
   pointer-events: none;
+  transform: rotate(220deg);
   @media (min-width: 480px) {
-    height: 400px;
-    width: 400px;
+    height: 650px;
+    width: 650px;
   }
   @media (min-width: 1200px) {
-    transform: rotate(220deg);
     width: 80vw;
     max-width: 700px;
     height: 80vw;
@@ -80,7 +80,15 @@ export const RotationContainer = styled.div`
 
 export const RoulettePointerImage = styled(NonDraggableImage)`
   position: absolute;
-  z-index: 5;
   width: 10%;
-  top: 315px;
+  transform: rotate(50deg);
+  z-index: 5;
+  @media (min-width: 480px) {
+    top: 200px;
+    left: -55px;
+  }
+  @media (min-width: 1200px) {
+    top: 315px;
+    left: -80px;
+  }
 `;
