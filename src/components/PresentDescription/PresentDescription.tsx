@@ -20,7 +20,7 @@ export const PresentDescription = ({
     </p>
 
     <input
-      className="add-new"
+      className="inputCommon"
       placeholder="Введите значение единиц выигрыша"
       value={presentDescription}
       onChange={({ target }) => setPresentDescription(target.value)}

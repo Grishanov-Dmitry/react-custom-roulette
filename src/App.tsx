@@ -34,6 +34,7 @@ export const App = (): ReactElement => {
   const [wheelSpeed, setWheelSpeed] = useState<number>(initWheelSpeed);
   const [resultList, setResultList] = useState<IResult[]>(initResultList);
   const [winTextValue, setWinTextValue] = useState<string>('');
+  const [textDistance, setTextDistance] = useState<number>(60);
 
   const saveToLocalState = () => {
     localStorage.setItem('drawingData', JSON.stringify(drawingData));
@@ -111,6 +112,7 @@ export const App = (): ReactElement => {
           prizeResult={prizeResult}
           wheelSpeed={wheelSpeed}
           resultList={resultList}
+          textDistance={textDistance}
           wheelStopped={wheelStopped}
           handleSpinClick={handleSpinClick}
           saveToLocalState={saveToLocalState}
@@ -124,6 +126,8 @@ export const App = (): ReactElement => {
           setPresentDescription={setPresentDescription}
           presentDescription={presentDescription}
           wheelSpeed={wheelSpeed}
+          textDistance={textDistance}
+          setTextDistance={setTextDistance}
           setWheelSpeed={setWheelSpeed}
           resetResultList={resetResultList}
         />

@@ -6,6 +6,7 @@ interface IPreparedWheel {
   mustStartSpinning: boolean;
   prizeResult: number;
   data: WheelData[];
+  textDistance: number;
   wheelSpeed: number;
   wheelStopped: () => void;
 }
@@ -15,6 +16,7 @@ export const PreparedWheel = ({
   prizeResult,
   data,
   wheelSpeed,
+  textDistance,
   wheelStopped,
 }: IPreparedWheel): ReactElement => (
   <Wheel
@@ -30,6 +32,7 @@ export const PreparedWheel = ({
     mustStartSpinning={mustStartSpinning}
     prizeNumber={prizeResult}
     data={data}
+    textDistance={textDistance}
     onStopSpinning={wheelStopped}
   />
 );

@@ -8,11 +8,14 @@ import { AddNewPresent } from '../AddNewPresent';
 import { WheelSpeed } from '../WheelSpeed';
 import { ResetDrawingData } from '../ResetDrawingData';
 import { ResetResultList } from '../ResetResultList';
+import { ChangeTextDistance } from '../ChangeTextDistance';
 
 interface ISettings {
   drawingData: WheelData[];
   presentDescription: string;
   wheelSpeed: number;
+  textDistance: number;
+  setTextDistance: (distance: number) => void;
   setDrawingData: (newDrawingData: WheelData[]) => void;
   setPresentDescription: (value: string) => void;
   setWheelSpeed: (value: number) => void;
@@ -24,6 +27,8 @@ export const Settings = ({
   setDrawingData,
   wheelSpeed,
   presentDescription,
+  textDistance,
+  setTextDistance,
   setPresentDescription,
   setWheelSpeed,
   resetResultList,
@@ -53,6 +58,11 @@ export const Settings = ({
           setPresentDescription={setPresentDescription}
         />
         <Separator />
+
+        <ChangeTextDistance
+          textDistance={textDistance}
+          setTextDistance={setTextDistance}
+        />
 
         <WheelSpeed wheelSpeed={wheelSpeed} setWheelSpeed={setWheelSpeed} />
       </div>

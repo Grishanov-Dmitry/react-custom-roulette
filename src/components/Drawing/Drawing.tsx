@@ -17,6 +17,7 @@ interface IDrawing {
   drawingData: WheelData[];
   wheelSpeed: number;
   resultList: IResult[];
+  textDistance: number;
   wheelStopped: () => void;
   handleSpinClick: () => void;
   saveToLocalState: () => void;
@@ -31,6 +32,7 @@ export const Drawing = ({
   drawingData,
   wheelSpeed,
   resultList,
+  textDistance,
   wheelStopped,
   handleSpinClick,
   saveToLocalState,
@@ -62,6 +64,7 @@ export const Drawing = ({
             prizeResult={prizeResult}
             data={drawingData}
             wheelSpeed={wheelSpeed}
+            textDistance={textDistance}
             wheelStopped={wheelStopped}
           />
           <img src={logoVulkan} alt="logo" className="logoImg" />

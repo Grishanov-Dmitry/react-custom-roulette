@@ -1,5 +1,4 @@
 import React, { ReactElement, useState } from 'react';
-import './AddNewPresent.css';
 import { Separator } from '../Separator';
 import { Heading } from '../Heading';
 import { WheelData } from '../Wheel/types';
@@ -35,7 +34,7 @@ export const AddNewPresent = ({
       <Separator />
       <Heading text="Добавить приз" />
       <input
-        className="add-new"
+        className="inputCommon"
         placeholder="Введите значение нового приза"
         value={newDrawing}
         onChange={({ target }) => setNewDrawing(target.value)}
