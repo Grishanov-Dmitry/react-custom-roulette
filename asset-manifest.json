@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-custom-roulette/static/css/main.b4e36ac7.chunk.css",
-    "main.js": "/react-custom-roulette/static/js/main.d744b1cb.chunk.js",
-    "main.js.map": "/react-custom-roulette/static/js/main.d744b1cb.chunk.js.map",
+    "main.js": "/react-custom-roulette/static/js/main.201cf5f1.chunk.js",
+    "main.js.map": "/react-custom-roulette/static/js/main.201cf5f1.chunk.js.map",
     "runtime-main.js": "/react-custom-roulette/static/js/runtime-main.f518e146.js",
     "runtime-main.js.map": "/react-custom-roulette/static/js/runtime-main.f518e146.js.map",
     "static/js/2.76b2ac88.chunk.js": "/react-custom-roulette/static/js/2.76b2ac88.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.f518e146.js",
     "static/js/2.76b2ac88.chunk.js",
     "static/css/main.b4e36ac7.chunk.css",
-    "static/js/main.d744b1cb.chunk.js"
+    "static/js/main.201cf5f1.chunk.js"
   ]
 }
