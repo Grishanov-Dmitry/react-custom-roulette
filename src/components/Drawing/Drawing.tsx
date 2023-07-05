@@ -2,7 +2,7 @@ import React, { ReactElement, useLayoutEffect } from 'react';
 import { WinnerText } from '../WinnerText/WinnerText';
 import { PreparedWheel } from '../PreparedWheel';
 import { WheelData } from '../Wheel/types';
-import logoVulkan from '../../assets/logo_vulkan.png';
+import logoSilver from '../../assets/logoSilver.png';
 import './Drawing.css';
 import { IResult } from '../../types';
 import { ResultTable } from '../ResultTable';
@@ -76,7 +76,7 @@ export const Drawing = ({
             textDistance={textDistance}
             wheelStopped={wheelStopped}
           />
-          <img src={logoVulkan} alt="logo" className="logoImg" />
+          <img src={logoSilver} alt="logo" className="logoImg" />
         </div>
         <RoulettePointerImage src={arrow} alt="roulette-static" />
       </div>

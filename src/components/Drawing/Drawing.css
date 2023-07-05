@@ -62,18 +62,18 @@
 
 @media (min-width: 480px) {
 	.logoImg {
-        width: 95px;
-        height: 95px;
-        top: 175px;
-        left: 178px;
+        width: 120px;
+        height: 76px;
+        top: 183px;
+        left: 167px;
 	}
 }
 
 @media (min-width: 1200px) {
 	.logoImg {
-        width: 160px;
-        height: 160px;
-        top: 265px;
-        left: 270px;
+        width: 178px;
+        height: 142px;
+        top: 272px;
+        left: 263px;
 	}
 }
