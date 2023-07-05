@@ -14,11 +14,12 @@ export const PresentList = ({
   drawingData,
   setDrawingData,
 }: IHeading): ReactElement => {
-  const deleteDrawingData = (value: string) => {
+  const deleteDrawingData = (deletingId: string) => {
     const newDrawingData = [...drawingData];
-    const indexOfOne = drawingData.findIndex(({ option }) => option !== value);
+    const indexOfOne = drawingData.findIndex(({ id }) => id === deletingId);
 
-    newDrawingData.splice(indexOfOne - 1, 1);
+    newDrawingData.splice(indexOfOne, 1);
+
     if (!newDrawingData.length) {
       // Have a mistake where data is empty arr
       setDrawingData([{ option: '', id: uniqid() }]);
@@ -39,10 +40,7 @@ export const PresentList = ({
           return (
             <div key={id} className="optionContainer">
               {option}
-              <Button
-                text="Удалить"
-                onClick={() => deleteDrawingData(option)}
-              />
+              <Button text="Удалить" onClick={() => deleteDrawingData(id)} />
             </div>
           );
         })}
