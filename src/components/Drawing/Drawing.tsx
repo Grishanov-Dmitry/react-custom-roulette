@@ -2,8 +2,12 @@ import React, { ReactElement, useLayoutEffect } from 'react';
 import { WinnerText } from '../WinnerText/WinnerText';
 import { PreparedWheel } from '../PreparedWheel';
 import { WheelData } from '../Wheel/types';
-import logo from '../../assets/logo2.png';
+import logoVulkan from '../../assets/logo_vulkan.png';
 import './Drawing.css';
+import { IResult } from '../../types';
+import { ResultTable } from '../ResultTable';
+import { RoulettePointerImage } from '../Wheel/styles';
+import arrow from '../../assets/arrow.svg';
 
 interface IDrawing {
   winnerText: string;
@@ -12,7 +16,10 @@ interface IDrawing {
   prizeResult: number;
   drawingData: WheelData[];
   wheelSpeed: number;
-  setMustSpin: (value: boolean) => void;
+  resultList: IResult[];
+  textDistance: number;
+  pressStartButton: (e: KeyboardEvent) => void;
+  wheelStopped: () => void;
   handleSpinClick: () => void;
   saveToLocalState: () => void;
   setIsInitCondition: (value: boolean) => void;
@@ -25,7 +32,10 @@ export const Drawing = ({
   prizeResult,
   drawingData,
   wheelSpeed,
-  setMustSpin,
+  resultList,
+  textDistance,
+  pressStartButton,
+  wheelStopped,
   handleSpinClick,
   saveToLocalState,
   setIsInitCondition,
@@ -38,24 +48,38 @@ export const Drawing = ({
   }, []);
 
   return (
-    <div className="drawingContainer">
-      <WinnerText
-        prizeResult={winnerText}
-        isShowWinnerText={isShowWinnerText}
-      />
-      <div className="wheelContainer">
-        <PreparedWheel
-          mustStartSpinning={mustSpin}
-          prizeResult={prizeResult}
-          data={drawingData}
-          wheelSpeed={wheelSpeed}
-          setMustSpin={setMustSpin}
+    <div
+      className="drawingContainer"
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      onKeyDown={pressStartButton}
+      tabIndex={0}
+      role="button"
+    >
+      <div className="info">
+        <WinnerText
+          prizeResult={winnerText}
+          isShowWinnerText={isShowWinnerText}
         />
-        <img src={logo} alt="logo" className="logoImg" />
+        <button type="button" className="spinButton" onClick={handleSpinClick}>
+          CLICK ME
+        </button>
+        <ResultTable resultList={resultList} />
       </div>
-      <button type="button" className="spinButton" onClick={handleSpinClick}>
-        CLICK ME
-      </button>
+      <div className="containerWithArrow">
+        <div className="wheelContainer">
+          <PreparedWheel
+            mustStartSpinning={mustSpin}
+            prizeResult={prizeResult}
+            data={drawingData}
+            wheelSpeed={wheelSpeed}
+            textDistance={textDistance}
+            wheelStopped={wheelStopped}
+          />
+          <img src={logoVulkan} alt="logo" className="logoImg" />
+        </div>
+        <RoulettePointerImage src={arrow} alt="roulette-static" />
+      </div>
     </div>
   );
 };

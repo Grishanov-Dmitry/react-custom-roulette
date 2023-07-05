@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react';
-import arrow from '../../assets/arrow.svg';
 import { WheelData } from '../Wheel/types';
 import { Wheel } from '../Wheel/Wheel';
 
@@ -7,8 +6,9 @@ interface IPreparedWheel {
   mustStartSpinning: boolean;
   prizeResult: number;
   data: WheelData[];
+  textDistance: number;
   wheelSpeed: number;
-  setMustSpin: (value: boolean) => void;
+  wheelStopped: () => void;
 }
 
 export const PreparedWheel = ({
@@ -16,7 +16,8 @@ export const PreparedWheel = ({
   prizeResult,
   data,
   wheelSpeed,
-  setMustSpin,
+  textDistance,
+  wheelStopped,
 }: IPreparedWheel): ReactElement => (
   <Wheel
     textColors={['#ffffff']}
@@ -31,15 +32,7 @@ export const PreparedWheel = ({
     mustStartSpinning={mustStartSpinning}
     prizeNumber={prizeResult}
     data={data}
-    onStopSpinning={() => {
-      setMustSpin(false);
-    }}
-    pointerProps={{
-      src: arrow,
-      style: {
-        right: '-35px',
-        transform: 'rotate(-170deg)',
-      },
-    }}
+    textDistance={textDistance}
+    onStopSpinning={wheelStopped}
   />
 );

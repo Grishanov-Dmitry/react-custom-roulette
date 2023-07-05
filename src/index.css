@@ -23,6 +23,7 @@ main {
   background-size: cover;
   flex-direction: column;
   height: 100%;
+  user-select: none;
 }
 .container {
   position: relative;

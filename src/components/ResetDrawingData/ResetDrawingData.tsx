@@ -4,11 +4,13 @@ import { testDrawingData } from '../../data';
 import { Button } from '../Button';
 import { Heading } from '../Heading';
 
-interface IResetField {
+interface IResetDrawingData {
   setDrawingData: (newDrawingData: WheelData[]) => void;
 }
 
-export const ResetField = ({ setDrawingData }: IResetField): ReactElement => (
+export const ResetDrawingData = ({
+  setDrawingData,
+}: IResetDrawingData): ReactElement => (
   <div className="resetContainer">
     <Heading text="Сброс списка призов" />
     <p>

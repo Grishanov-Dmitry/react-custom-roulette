@@ -13,7 +13,7 @@
     padding: 5px 30px;
     background-color: rgb(166 211 245 / 40%);
     border-radius: 10px;
-    width: 700px;
+    width: 270px;
     margin-bottom: 30px;
 }
 .addDeleteContainer {
@@ -33,11 +33,25 @@
     width: 400px;
     margin-top: 70px;
 }
-
-.add-new {
-    width: 300px;
+.inputCommon {
+    width: 250px;
     border-radius:15px;
     border:0;
     box-shadow:4px 4px 10px rgba(0,0,0,0.06);
     padding: 10px;
+}
+
+@media (min-width: 480px) {
+	.content {
+        width: 400px;
+	}
+    .inputCommon {
+        width: 300px;
+    }
+}
+
+@media (min-width: 760px) {
+	.content {
+        width: 700px;
+	}
 }
